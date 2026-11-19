@@ -1,0 +1,25 @@
+# MM Centro Estético
+
+> Official web application for MM Centro Estético (Mónica Mejía) in Cuenca, Ecuador. Built with React 19, TypeScript, Vite 6, Tailwind CSS v4, and Lenis.
+
+## Routes
+- `#/` — Home page with 4-model interactive diagnostic hero, ritual timeline, 9 featured treatments, and clinic statement.
+- `#/servicios` — Full catalog of 17 clinical aesthetic protocols with search and category filtering.
+- `#/servicios?categoria={faciales|corporales|post-quirurgicos|mirada-labios}` — Filtered catalog view.
+- `#/servicios/:id` — Detailed protocol view with benefits, target conditions, technology, FAQs, and WhatsApp booking.
+- `#/contacto` — Clinic location, embedded Google Maps, and WhatsApp consultation builder.
+- `#/ritual`, `#/tratamientos`, `#/promesa`, `#/instalaciones` — Smooth-scroll anchors on the Home view.
+
+## Key Files
+- [README.md](README.md): Project overview, architecture diagram, catalog chart, and setup instructions.
+- [docs/PRD.md](docs/PRD.md): Product Requirements Document, user flows, and technical specifications.
+- [src/App.tsx](src/App.tsx): Root application, model cycling state, and hash route switching.
+- [src/hooks/useRouter.ts](src/hooks/useRouter.ts): Hash + query-string router (`parseHash`, `useRouter`).
+- [src/content.ts](src/content.ts): Brand copy, 4 hero models (`sofia`, `valentina`, `camila`, `isabela`), and footer data.
+- [src/servicesData.ts](src/servicesData.ts): 17 clinical protocols across 4 categories.
+- [src/tracks.json](src/tracks.json): 24fps facial landmark coordinates for hero scan-ring tracking.
+- [src/components/Hero.tsx](src/components/Hero.tsx): Dual-video (`intro` -> `idle`) stage with scan rings and telemetry card.
+- [src/components/FeaturedServices.tsx](src/components/FeaturedServices.tsx): Featured treatments grid and category navigation.
+- [src/views/ServicesDirectoryView.tsx](src/views/ServicesDirectoryView.tsx): Searchable/filterable treatment directory.
+- [src/views/ServiceDetailView.tsx](src/views/ServiceDetailView.tsx): Protocol detail page.
+- [src/views/ContactView.tsx](src/views/ContactView.tsx): Contact page and Google Maps embed.
